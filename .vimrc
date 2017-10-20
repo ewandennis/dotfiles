@@ -23,6 +23,9 @@ set undolevels=1000
 set backspace=indent,eol,start
 set hidden
 
+" Don't save swp files in cwd
+set directory-=.
+
 syntax on
 colorscheme monokai
 
@@ -45,13 +48,41 @@ set timeoutlen=10
 set lazyredraw
 
 call plug#begin('~/.vim/plugged')
-Plug 'Valloric/YouCompleteMe', {'do': 'git submodule update --init --recursive'}
+
+" tmux.conf syntax hilighting
 Plug 'keith/tmux.vim'
+
+" A solid language pack
 Plug 'sheerun/vim-polyglot'
+
+" Git 
 Plug 'tpope/vim-fugitive'
+
+" Linting
+Plug 'w0rp/ale'
+
+" Git line-by-line status info
+Plug 'airblade/vim-gitgutter'
+
+" Distraction free mode
+Plug 'junegunn/goyo.vim'
+
 call plug#end()
 
+" ALE config
+let g:ale_sign_warning = '▲'
+let g:ale_sign_error = '✗'
+let g:ale_fixers = {
+  \ 'javascript': ['eslint']
+  \}
 
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion = 1
+" gitgutter config
+set updatetime=250
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
+
+" A polite reminder to try new things
+autocmd VimEnter * echo "Try :Gblame or :Goyo"
 
