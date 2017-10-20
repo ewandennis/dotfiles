@@ -11,7 +11,7 @@ Creates:
  - ~/.vimrc
  - ~/.vim/
 
-## tmux
+## tmux
 
 Install:
  - ./install.sh
