@@ -1,0 +1,17 @@
+[core]
+	user = Ewan Dennis
+	email = ewan.dennis@gmail.com
+	editor = vim -f
+
+[push]
+	default = simple
+[status]
+	short = true
+[merge]
+	tool = opendiff
+[user]
+	email = ewandennis@users.noreply.github.com
+[log]
+	abbrevCommit = true
+[format]
+	pretty = oneline
