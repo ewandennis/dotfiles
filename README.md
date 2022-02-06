@@ -1,9 +1,11 @@
 # My Dot Files
 
+## Install 
+ - ./install.sh
+
 ## vim
 
 Install:
- - ./install.sh
  - vim
  - :PlugInstall
 
@@ -13,9 +15,11 @@ Creates:
 
 ## tmux
 
-Install:
- - ./install.sh
-
 Creates:
  - ~/.tmux.conf
+
+## Bash / OS X
+
+Creates:
+ - ~/.bash_profile
 
